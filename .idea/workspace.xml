@@ -24,7 +24,7 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="getActionBar" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbd0eef8-2c71-4005-95d1-50a8040d12bf" name="Default" comment="" />
@@ -34,7 +34,7 @@
     <file path="$PROJECT_DIR$/../zxing-2.1/android/res/values/strings.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362725631425" ignored="false" />
     <file path="/ViewfinderView.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362733080870" ignored="false" />
     <file path="/main.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362726271552" ignored="false" />
-    <file path="/fragment.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363254261199" ignored="false" />
+    <file path="/fragment.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363273338144" ignored="false" />
     <file path="$PROJECT_DIR$/../zxing-2.1/core/core.jar!/com/google/zxing/ResultPoint.class" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362726954014" ignored="false" />
     <file path="/CameraManager.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730547380" ignored="false" />
     <file path="/CameraConfigurationManager.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362729565409" ignored="false" />
@@ -45,7 +45,7 @@
     <file path="$PROJECT_DIR$/gen/com/example/aboutme/Manifest.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730209687" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/aboutme/R.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730209687" ignored="false" />
     <file path="$PROJECT_DIR$/../android/adt-bundle-windows-x86_64/sdk/tools/ant/build.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730002514" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363248685820" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363274289590" ignored="false" />
     <file path="/AsyncTaskExecManager.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730090088" ignored="false" />
     <file path="/DefaultOpenCameraInterface.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730419761" ignored="false" />
     <file path="/GingerbreadOpenCameraInterface.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362730432782" ignored="false" />
@@ -99,10 +99,12 @@
     <file path="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/wifi/NetworkType.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362806196695" ignored="false" />
     <file path="/capture.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362808508995" ignored="false" />
     <file path="/preferences.xml" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1362809672695" ignored="false" />
-    <file path="/AboutmeMain.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363253962667" ignored="false" />
-    <file path="/MakeQRCodeActivity.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363254362912" ignored="false" />
-    <file path="/Dummy.txt" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363251483774" ignored="false" />
+    <file path="/AboutmeMain.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363274164087" ignored="false" />
+    <file path="/MakeQRCodeActivity.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363274584253" ignored="false" />
+    <file path="/Dummy.txt" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363305657563" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/izouying/aboutme/client/android/R.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363263270651" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/izouying/aboutme/client/android/Manifest.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363275217513" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/izouying/aboutme/client/android/BuildConfig.java" changelist="fbd0eef8-2c71-4005-95d1-50a8040d12bf" time="1363275217513" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +119,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -151,7 +154,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -164,7 +166,20 @@
       <file leaf-file-name="AboutmeMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/AboutmeMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="62" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+            <state line="75" column="32" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1328#2024#0" expanded="true" />
+                <element signature="e#2013#2014#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakeQRCodeActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/MakeQRCodeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="76" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.58966565">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,13 +187,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakeQRCodeActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/makeqrcode/MakeQRCodeActivity.java">
+      <file leaf-file-name="makeqrcode.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/makeqrcode.xml">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="56" selection-start="542" selection-end="542" vertical-scroll-proportion="0.7872807">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="60" column="16" selection-start="3361" selection-end="3361" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -189,6 +214,11 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -202,21 +232,20 @@
         <option value="$PROJECT_DIR$/res/layout/capture.xml" />
         <option value="$PROJECT_DIR$/res/xml/preferences.xml" />
         <option value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/CaptureActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/makeqrcode.xml" />
-        <option value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/AboutmeMain.java" />
         <option value="$PROJECT_DIR$/src/MakeQRCodeActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/MakeQRCodeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/makeqrcode/MakeQRCodeActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/AboutmeMain.java" />
+        <option value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android/MakeQRCodeActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="776" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="694" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -246,7 +275,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,46 +304,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aboutme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aboutme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="makeqrcode" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/com/izouying/aboutme/client/android" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
@@ -326,10 +329,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -342,6 +346,9 @@
       <recent name="E:\mobile_developer_tools\aboutme\src\com.example.aboutme.client.android" />
       <recent name="E:\mobile_developer_tools\aboutme\res\values" />
       <recent name="E:\mobile_developer_tools\aboutme\res\xml" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.izouying.aboutme.client.android" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.aboutme.camera.open" />
@@ -382,19 +389,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -421,6 +415,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -529,14 +536,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1280" height="694" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.8646189" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.8646189" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6219512" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6219512" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67007965" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -546,18 +552,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31118315" sideWeight="0.21956769" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19349593" sideWeight="0.534846" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37804878" sideWeight="0.534846" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31118315" sideWeight="0.36973834" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23905997" sideWeight="0.8065041" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23905997" sideWeight="0.6219512" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20905924" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.8646189" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20932879" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67007965" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -622,26 +629,25 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../android/adt-bundle-windows-x86_64/sdk/platforms/android-12/android.jar!/android/os/Message.class">
+    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/AboutmeMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="64" selection-start="520" selection-end="533" vertical-scroll-proportion="0.33450705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="79" selection-start="4848" selection-end="4848" vertical-scroll-proportion="0.7063197">
-          <folding />
+        <state line="22" column="62" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1328#2024#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/aboutmemain.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="36" selection-start="587" selection-end="587" vertical-scroll-proportion="0.37623763">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -651,42 +657,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../android/adt-bundle-windows-x86_64/sdk/platforms/android-12/android.jar!/android/app/Fragment.class">
+    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/makeqrcode/ContentInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="881" selection-end="881" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/makeqrcode.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/MakeQRCodeHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="43" selection-start="234" selection-end="234" vertical-scroll-proportion="0.2851296">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/AboutmeMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="62" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+        <state line="15" column="52" selection-start="363" selection-end="363" vertical-scroll-proportion="0.6302521">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/makeqrcode/MakeQRCodeActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/CaptureActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="56" selection-start="542" selection-end="542" vertical-scroll-proportion="0.7872807">
+        <state line="124" column="31" selection-start="4672" selection-end="4749" vertical-scroll-proportion="0.4047619">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/AboutmeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="32" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1328#2024#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/makeqrcode.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="16" selection-start="3361" selection-end="3361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/izouying/aboutme/client/android/MakeQRCodeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="76" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.58966565">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -733,7 +750,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android 1.5 Platform</last-edited>
+          <last-edited>Android 4.2 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -757,7 +774,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>Android 1.5 Platform</last-edited>
+          <last-edited>Android 4.2 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

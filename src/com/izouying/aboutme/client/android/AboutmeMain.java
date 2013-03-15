@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import com.izouying.aboutme.client.android.makeqrcode.MakeQRCodeActivity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -45,6 +44,8 @@ public class AboutmeMain extends Activity {
                         openShowMyInfo();
                         break;
                     case R.id.make_qrcode_button:
+                        Log.v(TAG, "button on make qrcode -------------");
+                        makeQRCode();
                         break;
                     case R.id.scan_button:
                         openScanQRCode();
@@ -72,5 +73,7 @@ public class AboutmeMain extends Activity {
     private void makeQRCode(){
         Intent intent = getIntent();
         intent.setClass(AboutmeMain.this, MakeQRCodeActivity.class);
+        startActivity(intent);
+        Log.v(TAG, "Start makeQRCode activity!!!!!!!") ;
     }
 }

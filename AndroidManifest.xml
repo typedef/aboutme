@@ -57,6 +57,15 @@
         </intent-filter>
         </activity>
 
+        <activity android:name=".MakeQRCodeActivity"
+                >
+            <intent-filter>
+                <action android:name="com.izouying.aboutme.client.android.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+
         <activity android:name=".CaptureActivity"
                   android:screenOrientation="landscape"
                   android:stateNotNeeded="true"
