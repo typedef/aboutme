@@ -1,11 +1,16 @@
 package com.izouying.aboutme.client.android;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.app.Fragment;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.view.*;
+import android.widget.*;
+import com.izouying.aboutme.client.android.addInfotools.ScanTabFragment;
+import com.izouying.aboutme.client.android.showmyinfo.MyInfoFragment;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,13 +25,17 @@ public class AboutmeMain extends Activity {
     private  Button mScanButton;
     private  Button mMakeQRCodeButton;
     private  Button mShowMyInfoButton;
-    private View.OnClickListener mOnClickListener;
+    private  View.OnClickListener mOnClickListener;
+    private  boolean mShowOrHidden=true;
+    private  ActionBar mActionBar;
 
     @Override
     public void  onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.aboutmemain);
-        mScanButton = (Button)findViewById(R.id.scan_button);
+
+        initActionBar();
+       /* mScanButton = (Button)findViewById(R.id.scan_button);
         mMakeQRCodeButton = (Button)findViewById(R.id.make_qrcode_button);
         mShowMyInfoButton = (Button)findViewById(R.id.show_my_info_button);
 
@@ -34,40 +43,65 @@ public class AboutmeMain extends Activity {
         mScanButton.setOnClickListener(mOnClickListener);
         mMakeQRCodeButton.setOnClickListener(mOnClickListener);
         mShowMyInfoButton.setOnClickListener(mOnClickListener);
+        */
+
+
     }
 
-    private View.OnClickListener createOnClickListner() {
-        return  new View.OnClickListener(){
-            public void onClick(View view){
-                switch (view.getId()){
-                    case R.id.show_my_info_button:
-                        openShowMyInfo();
-                        break;
-                    case R.id.make_qrcode_button:
-                        Log.v(TAG, "button on make qrcode -------------");
-                        makeQRCode();
-                        break;
-                    case R.id.scan_button:
-                        openScanQRCode();
-                        break;
-                    default:
-                        Log.v(TAG, "No Button match for id:"+(int)view.getId());
-                }
-            }
-        };
+   void initActionBar(){
+        mActionBar = getActionBar();
+        mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        mActionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP, ActionBar.DISPLAY_HOME_AS_UP);
+        mActionBar.setTitle("");
+
+        ScanTabFragment scanTabFragment = new ScanTabFragment(this);
+
+        mActionBar.addTab(mActionBar.newTab().setText(R.string.scan).setTabListener(new myTabListener(scanTabFragment)));
+
+        MyInfoFragment aboutmeFragment = new MyInfoFragment(getResources().getString(R.string.show_my_info));
+        mActionBar.addTab(mActionBar.newTab().setText(R.string.show_my_info).setTabListener(new myTabListener(aboutmeFragment)));
+
+        TabContentFragment makeQRCodeFragment = new TabContentFragment(getResources().getString(R.string.make_qrcode));
+        mActionBar.addTab(mActionBar.newTab().setText(R.string.make_qrcode).setTabListener(new myTabListener(makeQRCodeFragment)));
+
     }
 
-    private void openShowMyInfo(){
+    private class myTabListener implements ActionBar.TabListener{
+        private Fragment mTabContentFragment;
+        public myTabListener(Fragment tabContentFragment){
+            mTabContentFragment = tabContentFragment;
+        }
 
-        Intent intent = getIntent();
-        //intent.setClass(AboutmeMain.this, )
-        startActivity(intent);
+        @Override
+        public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            fragmentTransaction.add(R.id.fragment_content, mTabContentFragment, null);
+        }
+
+        @Override
+        public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+            //To change body of implemented methods use File | Settings | File Templates.
+            fragmentTransaction.remove(mTabContentFragment);
+        }
+
+        @Override
+        public void onTabReselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
     }
 
-    private void openScanQRCode(){
-        Intent intent = getIntent();
-        intent.setClass(AboutmeMain.this, CaptureActivity.class);
-        startActivity(intent);
+    private class TabContentFragment extends Fragment {
+        private String mText;
+        public TabContentFragment(String text) {
+            mText = text;
+        }
+        @Override
+        public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState) {
+            View fragView = layoutInflater.inflate(R.layout.actionbar_tab_content,container,false);
+            TextView textView = (TextView)fragView.findViewById(R.id.text);
+            textView.setText(mText);
+            return fragView;
+        }
     }
 
     private void makeQRCode(){

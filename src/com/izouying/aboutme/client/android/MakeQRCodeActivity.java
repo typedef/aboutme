@@ -2,15 +2,16 @@ package com.izouying.aboutme.client.android;
 
 
 import android.app.Activity;
-import android.app.ActionBar;
-import android.support.v4.app.*;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.SpinnerAdapter;
-import android.app.ActionBar.OnNavigationListener;
-import com.izouying.aboutme.client.android.makeqrcode.ContentInfo;
-
+import android.view.Display;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.*;
+import com.google.zxing.WriterException;
+import com.izouying.aboutme.client.android.encode.QRCodeEncoder;
 
 
 /**
@@ -23,43 +24,61 @@ import com.izouying.aboutme.client.android.makeqrcode.ContentInfo;
 public class MakeQRCodeActivity extends Activity {
 
     private static String TAG = Package.class.getSimpleName();
-    SpinnerAdapter mSpinnerAdapter;
-    ActionBar mActionBar ;
+    Button mMakeQRButton ;
+    ImageView mQRCodeImage;
+    EditText mName;
+    EditText mPhone;
+    private QRCodeEncoder mQRCodeEncoder;
+
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.makeqrcode);
-        mSpinnerAdapter = new ArrayAdapter<CharSequence>(this, R.array.info_format,
-                        android.R.layout.simple_spinner_item);
+        setContentView(R.layout.make_qrcode);
+        mMakeQRButton = (Button)findViewById(R.id.makeQRcodeButton);
+        mQRCodeImage = (ImageView)findViewById(R.id.imageView);
+        mName = (EditText)findViewById(R.id.myName);
+        mPhone = (EditText)findViewById(R.id.myPhone);
 
-        mActionBar = getActionBar();
-        if (mActionBar == null)
-        {
-            Log.v(TAG, "getActionBar is null!!!!!!!!!!");
-        }else {
-            mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-            mActionBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
-            mActionBar.setListNavigationCallbacks(mSpinnerAdapter, new DropDownListenser());
-        }
+        mMakeQRButton.setOnClickListener(mMakeQRCodeButtonListener);
 
     }
 
-    private class DropDownListenser   extends FragmentActivity implements OnNavigationListener
-    {
-        String[] listNames = getResources().getStringArray(R.array.info_format);
+    View.OnClickListener mMakeQRCodeButtonListener = new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view) {
+                            String myName = mName.getText().toString();
+                    String myPhone = mPhone.getText().toString();
 
-        public boolean onNavigationItemSelected(int itemPostion, long itemId){
-            ContentInfo contentInfo = new ContentInfo();
-            FragmentManager manager = getSupportFragmentManager();
-            FragmentTransaction transaction = manager.beginTransaction();
-            // 将Activity中的内容替换成对应选择的Fragment
-            transaction.replace(R.id.context, contentInfo, listNames[itemPostion]);
-            transaction.commit();
-            return true;
-        }
-    }
+                    String mTextInfo = myName + " tel:"+myPhone;
+                    Log.v(TAG, mTextInfo+"===");
 
+                    WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
+                    Display display = manager.getDefaultDisplay();
+                    int width = display.getWidth();
+                    int height = display.getHeight();
+                    int smallerDimension = width < height ? width : height;
+                    smallerDimension = smallerDimension * 7 / 8;
+                    try{
+                        Intent intent = getIntent();
+                        intent.setAction(Intents.Encode.ACTION);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra(Intents.Encode.DATA, myPhone.toString());
+                        intent.putExtra(Intents.Encode.TYPE,Contents.Type.PHONE);
+                        //intent.setClass(MakeQRCodeActivity.this, EncodeActivity.class);
+                        // startActivity(intent);
+                        mQRCodeEncoder = new QRCodeEncoder(MakeQRCodeActivity.this, intent, smallerDimension, false);
+                        Bitmap bitmap = mQRCodeEncoder.encodeAsBitmap();
+                        mQRCodeImage.setImageBitmap(bitmap);
+                    } catch (WriterException e) {
+                        Log.w(TAG, "Could not encode barcode", e);
+                        //showErrorMessage(R.string.msg_encode_contents_failed);
+                        mQRCodeEncoder = null;
+
+                    }
+
+                 }
+    };
 
 
 }

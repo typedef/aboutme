@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17"/>
+    <uses-sdk android:minSdkVersion="11" />
 
     <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
@@ -38,14 +38,14 @@
                    android:clearTaskOnLaunch="true"
                    android:stateNotNeeded="true"
                    android:configChanges="orientation|keyboardHidden"
-                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+
                    android:windowSoftInputMode="stateAlwaysHidden">
         <activity android:name=".AboutmeMain"
-                   android:screenOrientation="landscape"
+
                    android:clearTaskOnLaunch="true"
                    android:stateNotNeeded="true"
                    android:configChanges="orientation|keyboardHidden"
-                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+
                    android:windowSoftInputMode="stateAlwaysHidden">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
@@ -57,8 +57,7 @@
         </intent-filter>
         </activity>
 
-        <activity android:name=".MakeQRCodeActivity"
-                >
+        <activity android:name=".MakeQRCodeActivity">
             <intent-filter>
                 <action android:name="com.izouying.aboutme.client.android.SCAN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
