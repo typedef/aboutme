@@ -56,8 +56,11 @@ public class AboutmeMain extends Activity {
     void initActionBar(){
         mActionBar = getActionBar();
         mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        mActionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP, ActionBar.DISPLAY_HOME_AS_UP);
-        mActionBar.setTitle("");
+
+        mActionBar.setDisplayOptions(0);
+        mActionBar.setDisplayUseLogoEnabled(false);
+        mActionBar.setDisplayShowTitleEnabled(false);
+
 
         ScanTabFragment scanTabFragment = new ScanTabFragment(this);
 
