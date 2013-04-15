@@ -136,7 +136,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
     PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
-    showHelpOnFirstLaunch();
+   // showHelpOnFirstLaunch();
   }
 
   @Override
@@ -275,6 +275,10 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   public boolean onKeyDown(int keyCode, KeyEvent event) {
     switch (keyCode) {
       case KeyEvent.KEYCODE_BACK:
+          setResult(RESULT_CANCELED);
+          finish();
+          return  true;
+      /*
         if (source == IntentSource.NATIVE_APP_INTENT) {
           setResult(RESULT_CANCELED);
           finish();
@@ -285,6 +289,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
           return true;
         }
         break;
+        */
       case KeyEvent.KEYCODE_FOCUS:
       case KeyEvent.KEYCODE_CAMERA:
         // Handle these events so they don't launch the Camera app
@@ -403,6 +408,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       drawResultPoints(barcode, rawResult);
     }
 
+      Log.v(TAG, "handleDecode source:" + source);
     switch (source) {
       case NATIVE_APP_INTENT:
       case PRODUCT_SEARCH_LINK:
@@ -615,6 +621,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
           }
         }
       }
+      Log.v(TAG, "before ------sendReplyMessage--" + R.id.return_scan_result );
       sendReplyMessage(R.id.return_scan_result, intent, resultDurationMS);
       
     } else if (source == IntentSource.PRODUCT_SEARCH_LINK) {
@@ -622,7 +629,9 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       // Reformulate the URL which triggered us into a query, so that the request goes to the same
       // TLD as the scan URL.
       int end = sourceUrl.lastIndexOf("/scan");
-      String replyURL = sourceUrl.substring(0, end) + "?q=" + resultHandler.getDisplayContents() + "&source=zxing";      
+      String replyURL = sourceUrl.substring(0, end) + "?q=" + resultHandler.getDisplayContents() + "&source=zxing";
+
+      Log.v(TAG, "before ------sendReplyMessage--" + replyURL );
       sendReplyMessage(R.id.launch_product_query, replyURL, resultDurationMS);
       
     } else if (source == IntentSource.ZXING_LINK) {
@@ -637,6 +646,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
           // can't happen; UTF-8 is always supported. Continue, I guess, without encoding
         }
         String replyURL = returnUrlTemplate.replace(RETURN_CODE_PLACEHOLDER, codeReplacement);
+        Log.v(TAG, "before ------sendReplyMessage+++" + replyURL );
         sendReplyMessage(R.id.launch_product_query, replyURL, resultDurationMS);
       }
       

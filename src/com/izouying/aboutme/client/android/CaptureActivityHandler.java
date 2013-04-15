@@ -73,6 +73,7 @@ public final class CaptureActivityHandler extends Handler {
 
   @Override
   public void handleMessage(Message message) {
+
     switch (message.what) {
       case R.id.restart_preview:
         Log.d(TAG, "Got restart preview message");
@@ -148,8 +149,8 @@ public final class CaptureActivityHandler extends Handler {
   private void restartPreviewAndDecode() {
     if (state == State.SUCCESS) {
       state = State.PREVIEW;
-      cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
-      activity.drawViewfinder();
+        cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
+        activity.drawViewfinder();
     }
   }
 

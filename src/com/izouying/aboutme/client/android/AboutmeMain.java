@@ -33,22 +33,27 @@ public class AboutmeMain extends Activity {
     public void  onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.aboutmemain);
-
-        initActionBar();
-       /* mScanButton = (Button)findViewById(R.id.scan_button);
-        mMakeQRCodeButton = (Button)findViewById(R.id.make_qrcode_button);
-        mShowMyInfoButton = (Button)findViewById(R.id.show_my_info_button);
-
-        mOnClickListener = createOnClickListner();
-        mScanButton.setOnClickListener(mOnClickListener);
-        mMakeQRCodeButton.setOnClickListener(mOnClickListener);
-        mShowMyInfoButton.setOnClickListener(mOnClickListener);
-        */
-
-
+        //initActionBar();
     }
 
-   void initActionBar(){
+    @Override
+    protected void onStart() {
+        super.onStart();    //To change body of overridden methods use File | Settings | File Templates.
+        initActionBar();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);    //To change body of overridden methods use File | Settings | File Templates.
+
+        if (data == null){
+            Log.v(TAG, "data is null ----");
+        }
+        Log.v(TAG,requestCode + "---" + resultCode +"----------");
+    }
+
+    void initActionBar(){
         mActionBar = getActionBar();
         mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         mActionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP, ActionBar.DISPLAY_HOME_AS_UP);

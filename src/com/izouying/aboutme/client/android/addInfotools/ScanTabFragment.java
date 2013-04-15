@@ -25,15 +25,14 @@ import com.izouying.aboutme.client.android.R;
 public class ScanTabFragment extends Fragment{
     private Contents mContents;
     private Activity mParents;
-    final private  int REQUEST_ASK_SCAN_QRCODE_ID = 1;
+    final private  int REQUEST_ASK_SCAN_QRCODE_ID = 0x0002;
 
     final private String TAG = "ScanTabFragment";
+    public ScanTabFragment(){
+    }
     public ScanTabFragment(Activity activity){
         mParents = activity;
     }
-
-
-
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState){
         View fragView = layoutInflater.inflate(R.layout.scan_qrcode,container,false);
@@ -47,17 +46,9 @@ public class ScanTabFragment extends Fragment{
         public void onClick(View view){
             Intent intent = mParents.getIntent();
             intent.setClass(mParents, CaptureActivity.class);
-            startActivityForResult(intent, REQUEST_ASK_SCAN_QRCODE_ID);
+            mParents.startActivityForResult(intent, REQUEST_ASK_SCAN_QRCODE_ID);
         }
     };
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        super.onActivityResult(requestCode, resultCode, data);    //To change body of overridden methods use File | Settings | File Templates.
-
-        Log.v(TAG,requestCode + "---" + resultCode +"----------");
-    }
 
 }
 
