@@ -8,4 +8,9 @@ add merge test ...
 ssss test
 xixix
 haha, test. 
+<<<<<<< HEAD
 添加测试用的。
+=======
+
+你好，我是来测试的。
+>>>>>>> add test
