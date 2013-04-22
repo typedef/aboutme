@@ -68,7 +68,7 @@ public class AboutmeMain extends Activity {
 
         mActionBar.addTab(mActionBar.newTab().setText(R.string.scan).setTabListener(new myTabListener(scanTabFragment)));
 
-        MyInfoFragment aboutmeFragment = new MyInfoFragment(getResources().getString(R.string.show_my_info));
+        MyInfoFragment aboutmeFragment = new MyInfoFragment(this);
         mActionBar.addTab(mActionBar.newTab().setText(R.string.show_my_info).setTabListener(new myTabListener(aboutmeFragment)));
 
         MakeQRCodeFragment makeQRCodeFragment = new MakeQRCodeFragment(this);
